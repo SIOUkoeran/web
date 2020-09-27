@@ -1,0 +1,61 @@
+
+
+f=open("c:/numbers.txt","r")
+line=f.readlines()
+f.close()
+result=0
+n=0
+
+for count in line:
+    result=result+float(count)
+    
+print(result/len(line))
+
+
+2.
+
+import string
+
+def word_count(text):
+    word=text.split(' ')
+    wordDic={}
+    for i in word:
+        print(i)
+        cnt=word.count(i);
+        wordDic[i]=cnt
+    
+   
+
+    for cnts in wordDic:
+        print(cnts," : ",wordDic[cnts])
+
+    return
+
+f=open("c:/humptydumpty.txt")
+line=f.read()
+f.close()
+word_count(line)
+
+
+3.
+import math
+class circle():
+    def calcArea(meter):
+        print("반지를%d의 넓이는"%meter,meter*meter*math.pi)
+    def calcperimeter(meter):
+        print("원%d의 둘레는"%meter, meter*2*math.pi)
+circle.calcArea(100)
+circle.calcperimeter(100)
+
+4.
+import turtle as t
+
+
+class Myturtle(t.Turtle):
+    def drawSquare(self):
+        for i in range(4):
+            self.right(90)
+            self.forward(100)
+my_turtle=Myturtle()
+my_turtle.forward(100)
+my_turtle.drawSquare()
