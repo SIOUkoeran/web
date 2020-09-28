@@ -6,7 +6,7 @@ function divEscapedContentElement(message){
 function divSystemContentElement(message){
     return $('<div></div>').html('<i>'+message+'</i>');
 }
-function processUserInput(chatApp, socket){
+function processUserInput(chatApp){
     let message = $('#send-message').val();
   
     let systemMessage;
